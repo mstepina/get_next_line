@@ -50,6 +50,10 @@ void	checker(int fd, char **line, char **str)
 		end_check(fd, line, str);
 }
 
+*/ 
+** 
+*/
+
 int		read_func(int fd, char **str, int res)
 {
 	char		buff[BUFF_SIZE + 1];
@@ -71,6 +75,13 @@ int		read_func(int fd, char **str, int res)
 	}
 	return (res);
 }
+
+*/
+** First, the function checks for errors (invalid file descriptor, empty line or buffer size less than 1).
+** If there are any, returns -1. 
+** Then it reads the size of the buffer from the file. If reading fails, returns -1. 
+** 
+*/
 
 int		get_next_line(const int fd, char **line)
 {
