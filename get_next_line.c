@@ -12,12 +12,13 @@
 
 #include "get_next_line.h"
 
-*/
+/*
 ** Finds a new line character. Gets the pointer to the line
 ** (up to a new line character) with ft_strsub function from libft library. 
 ** Stores a pointer to the first character after new line character
 ** in a static array.
 */
+
 void	n_check(int fd, char **line, char **str)
 {
 	int		i;
@@ -37,7 +38,7 @@ void	n_check(int fd, char **line, char **str)
 	}
 }
 
-*/
+/*
 ** Gets the pointer to the last line in the file.
 */
 
@@ -48,9 +49,10 @@ void	end_check(int fd, char **line, char **str)
 }
 
 
-*/
+/*
 ** Function checks the line for a new line character or the end of the file  
 */
+
 void	checker(int fd, char **line, char **str)
 {
 	int i;
@@ -64,7 +66,7 @@ void	checker(int fd, char **line, char **str)
 		end_check(fd, line, str);
 }
 
-*/ 
+/* 
 ** Reads the file of BUFF_SIZE characters. If str array for this file descriptor is empty,
 ** it copies the content of the buffer into it. Otherwise, with the help of ft_strjoin function
 ** it adds the content of the buffer to the end of the fd element of str array. 
@@ -93,7 +95,7 @@ int		read_func(int fd, char **str, int res)
 	return (res);
 }
 
-*/
+/*
 ** First, the function checks for errors (invalid file descriptor, empty line or buffer size less than 1).
 ** If there are any, returns -1. 
 ** Then it calls read_func, that reads BUFF_SIZE from the file. If reading fails, returns -1. 
